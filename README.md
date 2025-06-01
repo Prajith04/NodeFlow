@@ -7,7 +7,9 @@ FlowBit is an advanced document processing system built with LangGraph, LangChai
 FlowBit consists of three main components:
 
 1. **FastAPI Backend** (`main.py`): Provides RESTful API endpoints for handling escalations, alerts, and compliance flags.
-2. **Agent Workflow** (`agent_workflow.py` & `app/src/agent/graph.py`): Implements a LangGraph-based agent system for document classification and processing.
+2. **Agent Workflow**: 
+   - `agent_workflow.py`: Implements a LangGraph-based agent system with command-line interface (CLI) output
+   - `app/src/agent/graph.py`: Core graph implementation that can be visualized with the LangGraph UI
 
 ## Features
 
@@ -73,7 +75,7 @@ The system uses SQLite for data persistence with the following tables:
    uvicorn main:app --reload
    ```
 
-## Usage
+### Usage
 
 ### Processing a Document
 
@@ -91,6 +93,24 @@ run_workflow("File: /path/to/invoice.pdf")
 # Process a JSON webhook
 run_workflow("File: /path/to/webhook.json")
 ```
+
+### Visualizing the Agent Graph
+
+To visualize and interact with the agent graph through the LangGraph UI:
+
+```bash
+# Navigate to the app directory
+cd app
+
+# Start the LangGraph development server
+langgraph dev
+
+# Open the displayed URL (usually http://localhost:3000) in your browser
+```
+
+This provides an interactive visualization of the agent workflow, allowing you to trace execution paths and debug agent interactions.
+
+![LangGraph Studio UI](app/static/studio_ui.png)
 
 ### Using the API Directly
 
@@ -118,6 +138,12 @@ The repository includes sample files for testing:
 - `sample_email.eml`: Example email for testing email processing
 - `sample_invoice.pdf` & `sample_policy.pdf`: PDF documents for testing
 - `sample_webhook_valid.json` & `sample_webhook_invalid.json`: JSON webhooks for testing validation
+
+## Notes
+
+- `agent_workflow.py` provides a command-line interface for testing and using the system, but does not have a graphical interface.
+- The core agent graph implementation in `app/src/agent/graph.py` can be visualized using the LangGraph development server.
+- `classifier_agent.py` is a separate experimental implementation and not part of the main workflow.
 
 ## Future Development
 
