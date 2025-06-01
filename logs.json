@@ -1,0 +1,139 @@
+{
+  "messages": [
+    {
+      "content": "/home/prajith/Desktop/flowbit/sample_webhook_invalid.json",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "human",
+      "name": null,
+      "id": "db7c5385-03c8-46cc-9434-1c510bd27ed0",
+      "example": false
+    },
+    {
+      "content": "\n    Classified input:\n    - Next agent: json_agent\n    - File path: /home/prajith/Desktop/flowbit/sample_webhook_invalid.json\n    - Data: [Document(metadata={}, page_content='JSON Content:\\ntype: payment_processor\\ntimestamp: invalid-date-format\\namount: 149.99\\ncustomer_id: 12345\\nitems: XYZ-123, ABC-456')]\n    ",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": null,
+      "id": "e9249fc6-b434-4c65-a697-c6090f0fdddc",
+      "example": false,
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    },
+    {
+      "content": "\n## Payment Webhook Analysis\n\n**Validation Status:** ❌ INVALID\n\n**Missing Required Fields:** transaction_id, status\n\n**Type Errors:** timestamp\n\n**Other Anomalies:** items\n\n**Summary:** JSON data is invalid due to missing required fields, type errors, and anomalies\n\n⚠️ **ALERT LOGGED** ⚠️\nAlert ID: ALT-5642\n    ",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": null,
+      "id": "70c978a5-8e12-46af-acce-839d9be7eb75",
+      "example": false,
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    },
+    {
+      "content": "Alert logged. Alert ID: ALT-7e9ad261",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": null,
+      "id": "628572e8-23b7-44de-a4de-c03b727b85db",
+      "example": false,
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    },
+    {
+      "content": "/home/prajith/Desktop/flowbit/sample_invoice.pdf",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "human",
+      "name": null,
+      "id": "ba0c9979-b5ce-4637-bd09-3510c6fa9791",
+      "example": false
+    },
+    {
+      "content": "\n    Classified input:\n    - Next agent: pdf_agent\n    - File path: /home/prajith/Desktop/flowbit/sample_invoice.pdf\n    - Data: Subtotal:\n$20,000.00\nTax\t(8%):\n$1,600.00\nTotal:\n$21,600.00\nINVOICE\nTechCorp\tSolutions\tInc.\n123\tTech\tBoulevard\nSan\tFrancisco,\tCA\t94107\nUnited\tStates\nPhone:\t(555)\t123-4567\nEmail:\tbilling@techcorp.example\nInvoice\tNumber:\n\tINV-2025-001\nDate\tIssued:\n\tMay\t31,\t2025\nDue\tDate:\n\tJune\t30,\t2025\nBilled\tTo:\nAcme\tCorporation\n789\tBusiness\tAve\nNew\tYork,\tNY\t10001\nCustomer\tID:\tCUST-9876\nItem\nDescription\nQuantity\nUnit\tPrice\nTotal\nSAAS-PRO\nEnterprise\tSaaS\tLicense\t-\tAnnual\n5\n$2,400.00\n$12,000.00\nSUPP-PREM\nPremium\tSupport\tPackage\n1\n$5,000.00\n$5,000.00\nTRAIN-ADV\nAdvanced\tTraining\tSession\n2\n$1,500.00\n$3,000.00\nPayment\tTerms\nPayment\tis\tdue\twithin\t30\tdays.\tPlease\tmake\tchecks\tpayable\tto\tTechCorp\tSolutions\tInc.\tor\tpay\tonline\tat\npayments.techcorp.example\nFor\tquestions\tconcerning\tthis\tinvoice,\tplease\tcontact\tour\taccounting\tdepartment\tat\taccounting@techcorp.example\n    ",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": null,
+      "id": "b266134f-b16e-47aa-a2ee-7e5d3e9bef7c",
+      "example": false,
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    },
+    {
+      "content": "\n## PDF Document Analysis\n\n**Document Type:** Invoice\n\n**Extracted Information:**\n**billed_to:** Acme Corporation\n**customer_id:** CUST-9876\n**date_issued:** May 31, 2025\n**due_date:** June 30, 2025\n**invoice_number:** INV-2025-001\n**items:** [{'description': 'Enterprise SaaS License- Annual', 'quantity': 5, 'total': '$12,000.00', 'unit_price': '$2,400.00'}, {'description': 'Premium Support Package', 'quantity': 1, 'total': '$5,000.00', 'unit_price': '$5,000.00'}, {'description': 'Advanced Training Session', 'quantity': 2, 'total': '$3,000.00', 'unit_price': '$1,500.00'}]\n\n**Total Amount:** $21,600.00\n\n\n\n**Summary:** Invoice from TechCorp Solutions Inc. to Acme Corporation for various services totaling $21,600.00.\n\n⚠️ **NEEDS ATTENTION** ⚠️\nReason: High-value invoice ($21,600.00)\n    ",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": null,
+      "id": "f92dc5c8-956e-4d35-a1ef-a4dd91bb0951",
+      "example": false,
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    },
+    {
+      "content": "Compliance risk flagged. Flag ID: FLG-6eaeda3a",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": null,
+      "id": "188ad8a1-1273-422f-9ca7-a8fb0aee1acc",
+      "example": false,
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    },
+    {
+      "content": "/home/prajith/Desktop/flowbit/sample_email.eml",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "human",
+      "name": null,
+      "id": "709c7c1c-58e2-43e5-bcd5-312eb0473b84",
+      "example": false
+    },
+    {
+      "content": "\n    Classified input:\n    - Next agent: email_agent\n    - File path: /home/prajith/Desktop/flowbit/sample_email.eml\n    - Data: [Document(metadata={'source': '/home/prajith/Desktop/flowbit/sample_email.eml', 'languages': ['eng'], 'file_directory': '/home/prajith/Desktop/flowbit', 'filename': 'sample_email.eml', 'filetype': 'message/rfc822', 'last_modified': '2025-05-31T10:00:00+00:00', 'sent_from': ['sender@example.com'], 'sent_to': ['recipient@example.com'], 'subject': 'Invoice for last month', 'category': 'NarrativeText', 'element_id': 'a6455b5f9a4b9d2e047c002ed626fb92'}, page_content='Please find attached the invoice for last month,very urgent.')]\n    ",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": null,
+      "id": "3f545d6b-bd4f-47ea-a48a-da5c94b82c2a",
+      "example": false,
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    },
+    {
+      "content": "\n## Email Analysis\n\n**From:** sender@example.com\n**Urgency:** HIGH\n**Issue:** Invoice for last month\n**Tone Detected:** Urgent\n**Action Taken:** Escalate\n\n**Summary:** The email contains an invoice for last month and is marked as very urgent.\n\n⚠️ **EMAIL ESCALATED** ⚠️\nTicket created: CRM-5364\n    ",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": null,
+      "id": "bb2b0483-cd16-4e3f-b62b-e4f0620548fd",
+      "example": false,
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    },
+    {
+      "content": "Email escalated. Ticket ID: CRM-4ea0f949",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "ai",
+      "name": null,
+      "id": "0b794510-f269-42ed-89c9-b00e969d4266",
+      "example": false,
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": null
+    }
+  ]
+}
