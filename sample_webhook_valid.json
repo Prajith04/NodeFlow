@@ -1,0 +1,11 @@
+{
+  "transaction_id": "txn-12345-abc",
+  "amount": 149.99,
+  "status": "completed",
+  "timestamp": "2025-05-31T12:00:00Z",
+  "customer_id": "CUST-12345",
+  "payment_method": "credit_card",
+  "currency": "USD",
+  "source": "web",
+  "campaign": "summer_sale"
+}

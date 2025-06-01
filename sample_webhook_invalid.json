@@ -1,0 +1,7 @@
+{
+  "type": "payment_processor",
+  "timestamp": "invalid-date-format",
+  "amount": "149.99",
+  "customer_id": 12345,
+  "items": "XYZ-123, ABC-456"
+}
